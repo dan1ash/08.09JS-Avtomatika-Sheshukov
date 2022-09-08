@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="assets/style/style.css" rel="stylesheet">
+		<Title> Registrartion</Title>
+	</head>
+	<body>
+		<div class="registration">
+		<form>
+
+			<label><span>Name:</span></label>
+			<input type="text" name="ename" placeholder="Введите имя" id="ename" required> 
+			<label><span>Mail:</span></label>
+			<input type="mail" name="email" placeholder="Введите почту" id="email" required> 
+			<label><span>Phone:</span></label>
+			<input type="Number" name="number" placeholder="Введите телефон" id="number" required> 
+			<div class="labels">
+				<label for="with"><span>Есть 18+</span></label>
+				<input type="radio" name="old" id="with" required>
+				<label for="without"><span>Нет 18</span></label>
+				<input type="radio" name="old" id="without" required>
+		</div>
+		 <input type="submit" style="height: auto" onclick="SendMessage()" />
+		</form>
+	</div>
+<script type="text/javascript">
+      function SendMessage() {
+        const inputName = document.getElementById("ename");
+        const inputEmail = document.getElementById("email");
+        const inputNumber = document.getElementById("number");
+        if (inputName.value == "") {
+		inputName.style.borderColor = "red";}
+		else{
+		inputName.style.borderColor = "black";}
+		if (inputEmail.value == "") {
+		inputEmail.style.borderColor = "red";}
+		else{
+		inputEmail.style.borderColor = "black";}
+		if (inputNumber.value == "") {
+		inputNumber.style.borderColor = "red";}
+		else{
+		inputNumber.style.borderColor = "black";}
+      }
+    </script>
+	  <script src="assets/index.js" type="text/javascript"></script>
+	</body>
+</html>
